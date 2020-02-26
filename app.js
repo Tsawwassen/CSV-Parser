@@ -11,13 +11,15 @@ app.set('view engine', 'handlebars');
 
 app.get('/', (req, res) => {
 
-
-  	
   	//Create view for user to upload a CSV file
   	//Parse the uploaded file on the server so that the information can be used
 
   	res.render('home');
   	
+});
+
+app.post('/fileupload', (req, res) => {
+	console.log("inside POST file upload");
 });
 
 app.listen(PORT, () => {
